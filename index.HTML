@@ -1,16 +1,686 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Troll Broma</title>
-<script>
-    window.onload = function() {
-        alert("GGGGG");
-    };
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css"/>
+    <link rel="stylesheet" href="css/estilos2.css"/>
+    <link rel="stylesheet" href="css/estilosusuarios.css"/>
+
+    <title>Ventas</title>
 </head>
 <body>
-<!-- Contenido de la página -->
+    <div class="header">
+        <div class="logo">
+            <img src="media/logo.png" alt="Logo" height="40">
+        </div>
+
+        <div class="datosUsuario">
+            <div class="usuario-info">
+                <img src="media/usuarios.png" alt="Logo" height="30">
+                <label for="usuario">Usuario:</label>
+                <div class="usuario" id="usuario"></div>
+            </div>
+            <label for="caja">Caja:</label>
+            <div class="caja" id="caja"></div>
+        </div>
+
+        <div class="nav-buttons">
+            
+            <button id="inicioBtn">Inicio</button>
+            <button id="articulosBtn">Artículos</button>
+            <button id="ventasBtn">Ventas</button>
+            <button id="comprasBtn">Compras</button>
+            <button id="clientesBtn">Clientes</button>
+            <button id="proveedoresBtn">Proveedores</button>
+            <button id="usuariosBtn">Usuarios</button>
+            <button>Cerrar sesión</button>
+            <button class="pantallacompleta" id="fullscreen-btn"></button>
+            
+        </div>
+        
+
+    </div>
+    <div class="content" id="paginaInicio">
+
+        <div class="tarjetas">
+            <div id="articulos" class="card" style="background-image: url(media/articulos.png);">
+                <div class="gradient"></div>
+                <div class="info2">
+                    <div class="titulo2">ARTICULOS</div>
+                </div>
+            </div>
+            <div id="ventas" class="card" style="background-image: url(media/ventas.png);">
+                <div class="gradient" style="background-image: linear-gradient(0deg, #5ae01188, transparent);"></div>
+                <div class="info2">
+                    <div class="titulo2">VENTAS</div>
+                </div>
+            </div>
+            <div id="compras" class="card" style="background-image: url(media/compras.png);">
+                <div class="gradient" style="background-image: linear-gradient(0deg, red, transparent);"></div>
+                <div class="info2">
+                    <div class="titulo2">COMPRAS</div>
+                </div>
+            </div>
+            <div id="clientes" class="card" style="background-image: url(media/clientes.png);">
+                <div class="gradient" style="background-image: linear-gradient(0deg, #0703fa, transparent);"></div>
+                <div class="info2">
+                    <div class="titulo2">CLIENTES</div>
+                </div>
+            </div>
+            <div id="proveedores" class="card" style="background-image: url(media/proveedores.png);">
+                <div class="gradient" style="background-image: linear-gradient(0deg, yellow, transparent);"></div>
+                <div class="info2">
+                    <div class="titulo2">PROVEEDORES</div>
+                </div>
+            </div>
+            <div id="usuarios" class="card" style="background-image: url(media/usuarios.png);">
+                <div class="gradient" style="background-image: linear-gradient(0deg, orange, transparent);"></div>
+                <div class="info2">
+                    <div class="titulo2">USUARIOS</div>
+                </div>
+            </div>
+        </div>
+
+
+            <div class="contenedor">
+                <div class="burbujas">
+                    <span style="--i:11;"></span>
+                    <span style="--i:12;"></span>
+                    <span style="--i:24;"></span>
+                    <span style="--i:10;"></span>
+                    <span style="--i:14;"></span>
+                    <span style="--i:23;"></span>
+                    <span style="--i:8;"></span>
+                    <span style="--i:16;"></span>
+                    <span style="--i:9;"></span>
+                    <span style="--i:20;"></span>
+                    <span style="--i:11;"></span>
+                    <span style="--i:5;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:21;"></span>
+                    <span style="--i:15;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:6;"></span>
+                    <span style="--i:17;"></span>
+                    <span style="--i:8;"></span>
+                    <span style="--i:16;"></span>
+                    <span style="--i:11;"></span>
+                    <span style="--i:12;"></span>
+                    <span style="--i:24;"></span>
+                    <span style="--i:10;"></span>
+                    <span style="--i:14;"></span>
+                    <span style="--i:20;"></span>
+                    <span style="--i:5;"></span>
+                    <span style="--i:16;"></span>
+                    <span style="--i:9;"></span>
+                    <span style="--i:20;"></span>
+                    <span style="--i:22;"></span>
+                    <span style="--i:11;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:12;"></span>
+                    <span style="--i:20;"></span>
+                    <span style="--i:10;"></span>
+                    <span style="--i:21;"></span>
+                    <span style="--i:15;"></span>
+                    <span style="--i:9;"></span>                    
+                    <span style="--i:8;"></span>
+                    <span style="--i:12;"></span>
+                    <span style="--i:24;"></span>
+                    <span style="--i:10;"></span>
+                    <span style="--i:14;"></span>
+                    <span style="--i:23;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:16;"></span>
+                    <span style="--i:19;"></span>
+                    <span style="--i:20;"></span>
+                    <span style="--i:22;"></span>
+                    <span style="--i:5;"></span>
+                    <span style="--i:8;"></span>
+                    <span style="--i:21;"></span>
+                    <span style="--i:15;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:16;"></span>
+                    <span style="--i:7;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:16;"></span>
+                    <span style="--i:11;"></span>
+                    <span style="--i:12;"></span>
+                    <span style="--i:24;"></span>
+                    <span style="--i:10;"></span>
+                    <span style="--i:14;"></span>
+                    <span style="--i:23;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:16;"></span>
+                    <span style="--i:19;"></span>
+                    <span style="--i:20;"></span>
+                    <span style="--i:12;"></span>
+                    <span style="--i:5;"></span>
+                    <span style="--i:8;"></span>
+                    <span style="--i:22;"></span>
+                    <span style="--i:15;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:11;"></span>
+                    <span style="--i:15;"></span>
+                    <span style="--i:13;"></span>
+                </div>
+            </div>
+            
+            
+            <footer class="footer">
+                Prime Main WEB &copy; 2024
+            </footer>
+
+    </div>
+    <div class="content" id="ventasContent">
+        
+        <div class="grid-container">
+            <ul>
+                <div class="menuToggle2"></div><div class="datos">Datos del comprobante</div>
+                <div class="grid" id="productGrid">
+                    <button id="filtro1" class="filtro" data-filtro="panes">Panes</button>
+                    <button id="filtro2" class="filtro" data-filtro="verduras">Verduras</button>
+                    <button id="filtro3" class="filtro" data-filtro="frutas">Frutas</button>
+                    <button id="filtro4" class="filtro" data-filtro="lacteos">Lácteos</button>
+                    <button id="filtro5" class="filtro" data-filtro="bebidas">Bebidas</button>
+                    <button id="filtro6" class="filtro" data-filtro="snacks">Snacks</button>
+                    <button id="filtro7" class="filtro" data-filtro="carnes">Carnes</button>
+                    <button id="filtro8" class="filtro" data-filtro="limpieza">Productos de limpieza</button>
+                    <button id="filtro9" class="filtro" data-filtro="cuidado">Productos de cuidado personal</button>
+                </div>
+
+                <div class="datos-cliente">
+                    <label class="titulo">Datos del cliente</label>
+                    <div class="atr">
+                        <div>
+                            <label for="cliente">Sr/a:</label>
+                            <input type="text" placeholder="-Cliente ocacional-" id="cliente">
+                            <ul id="suggestions" class="suggestions"></ul>
+                        </div>
+                        <div>
+                            <label for="telefono">Teléfono:</label>
+                            <input type="text" id="telefono">
+                        </div>
+                        <div>
+                            <label for="domicilio">Domicilio:</label>
+                            <input type="text" id="domicilio">
+                        </div>
+                        <div>
+                            <label for="email">E-mail:</label>
+                            <input type="text" id="email">
+                        </div>
+                        <div>
+                            <label for="condicionIVA">Condición IVA:</label>
+                            <select id="condicionIVA">
+                                <option value="consumidor-final" selected>Consumidor Final</option>
+                                <option value="monotributista">Monotributista</option>
+                                <option value="exento">Exento</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info" id="infoProduct">
+                    <div class="prod" id="nombreProducto"></div>
+                    <div id="idProducto"></div>
+                    <div id="codigoProducto"></div>
+                    <div id="precioProducto"></div>
+                    <div id="stockProducto"></div>
+                    <div id="ultimoProducto"></div>
+                </div>
+            </ul>
+        </div>
+    
+
+
+
+        <div class="table-container">
+            <h1 style="text-align: center;"><div id="nombre" class="xx"></div></h1>
+            <div class="table-wrapper">
+                <table id="tablaProductos">
+                    <thead>
+                        <tr>
+                            <th>Artículo</th>
+                            <th>Stock</th>
+                            <th>Precio unitario</th>
+                            <th>Cantidad</th>
+                            <th>Des/Rec</th>
+                            <th>Importe</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Las filas de productos se agregarán dinámicamente aquí -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="opciones">
+                <img src="media/parrafo1.png" alt="Parrafo1" height="30">
+                <button class="quitar" id="quitar" >Quitar</button>
+                <button class="descuento" id="descuento">Descuento</button>
+                <button class="recargo" id="recargo">Recargo</button>
+                <button class="cambiar-cantidad" id="cambiar-cantidad">Cambiar cantidad </button>
+                <button class="cambiar-precio" id="cambiar-precio">Cambiar precio</button>
+            </div>
+            
+        </div>
+        <div class="input-container">
+            
+            <div class="descripcion">
+                <p><strong>Subtotal:</strong> $<span id="subtotal">0.00</span></p>
+                <p><strong id="vista">Descuento/Recargo:</strong> $<span id="descuentoRecargo">0.00</span></p>
+                <p><strong>Total:</strong> $<span id="total" class="total">0.00</span></p>
+            </div>
+            <input type="text" id="producto">
+            <input type="text" id="precio">
+            <input type="text" placeholder="Código de barra" id="codigo" onblur="buscarArticuloPorCodigo()" oninput="buscarArticuloPorCodigo()">
+            <div class="colormensaje" id="mensaje"></div>
+            <input type="text" placeholder="Buscar producto" id="palabras" >
+
+            <div id="otroContexto">
+                <label for="cantidadProducto">Cantidad:</label>
+                <input type="number" id="cantidadProducto" min="1" value="1">
+            </div>
+            <input id="inputButton" type="button" value="Agregar" >
+            
+            <div class="general">
+            <img src="media/parrafo2.png" alt="Parrafo1" height="30">
+            <button class="descuento-recargo" id="descuento-recargo">Descuento/Recargo</button>
+            <select id="metodoPago">
+            <option value="efectivo" selected>Efectivo</option>
+            <option value="tarjetaDebito">Tarjeta de Débito</option>
+            <option value="tarjetaCredito">Tarjeta de Crédito</option>
+            <option value="transferencia">Transferencia</option>
+            <option value="otro">Otro</option>
+            </select>
+            </div>
+            <div class="cobrar">
+            <button class="cobrar" id="cobrar" >COBRAR</button>
+            </div>
+        </div>
+    
+
+        <div class="comprobante" id="datosComprobante">
+            <div id="time-display"></div>
+            <label class="titulo">Datos del comprobante</label>
+            <div class="factura">
+            <div>
+                                                    <label for="fecha">Fecha:</label>
+                                                    <input type="date" id="fecha">
+                                                
+                                                    <label for="tipo-ticket">Tipo:</label>
+                                                    <select id="tipo-ticket">
+                                                    <option value="ticket-fiscal" selected>Ticket Fiscal</option>
+                                                    <option value="fsctura-b">Factura B</option>
+                                                    <option value="factura-a">Factura A</option>
+                                                    <option value="otro">Otro</option>
+                                                    </select>
+                                                    
+                                                
+                                                    <label for="numero">Nro:</label>
+                                                    <input type="text" id="numero">
+                                                
+                                                
+                                                
+                                                    <label for="descripcion">Descripcion:</label>
+                                                    <input type="text" id="descripcion">
+                                                    <button class="ver" id="ver-comprobante">ver comprobante</button>
+                                                </div>
+
+            </div>
+        </div>
+        <div class="menuToggle"></div>
+        <div class="hora"></div>
+        
+
+    </div>
+    <div class="related-products" id="relatedProducts">
+            <?php
+                // Generar botones vacíos
+                for ($i = 1; $i <= 24; $i++) {
+                    echo "<button class='resultado'></button>";
+                }
+                ?>
+    </div>
+    <script src="script/ventas.js"></script>
+    <div class="content" id="articulosContent">
+        <div class="contenedorArticulos">
+            <div class="grid_menu_articulo">
+                <div class="listararticulosBtn">
+                    <button class="listararticulos">Listar</button>
+                </div>
+                <div class="filtrolista">
+                    <label for="buscararticulo">Buscar por:</label>
+                    <select id="buscararticulo">
+                        <option value="stock">Stock</option>
+                        <option value="precio">Precio</option>
+                        <option value="codigo">Codigo</option>
+                        <option value="nombre" selected>Nombre</option>
+                    </select>
+                </div>
+                <div class="inputtextoarticulo">
+                    <label for="textonumero"></label>
+                    <input id="textonumero" />
+                </div>
+            </div>
+            <div class="contenedortablados">
+                <div class="tablaart">
+                    <table id="articulostabla">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Artículo</th>
+                                <th>Stock</th>
+                                <th>Precio venta</th>
+                                <th>Precio costo</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Las filas de productos se agregarán dinámicamente aquí -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div id="modal2" class="modal2">
+                <div class="modalcontent">
+                    <form id="articuloForm">
+                        <input type="hidden" id="articuloId" name="id">
+                        <div>
+                            <label for="codigoInput">Código:</label>
+                            <input type="text" id="codigoInput" name="codigo">
+                            <label for="articuloInput">Artículo</label>
+                            <input type="text" id="articuloInput" name="articulo">
+                        </div>
+                        <div>
+                            <label for="pcostoInput">Costo:</label>
+                            <input type="number" id="pcostoInput" name="pcosto">
+                            <label for="pventaInput">($)Venta</label>
+                            <input type="number" id="pventaInput" name="pventa">
+                        </div>
+                        <div>
+                            <label for="stockInput">Stock:</label>
+                            <input type="number" id="stockInput" name="stock">
+                            <label for="minimoInput">Mínimo</label>
+                            <input type="number" id="minimoInput" name="minimo">
+                        </div>
+                        <button type="submit">Guardar</button>
+                        <button type="button" id="limpiarBtn">Limpiar</button>
+
+
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="script/articulos.js"></script>
+    <div class="content" id="comprasContent">
+        <p>Este es el contenido de compras.</p>
+    </div>
+
+    <div class="content" id="clientesContent">
+        <p>Este es el contenido de clientes.</p>
+    </div>
+    <div class="content" id="proveedoresContent">
+        <p>Este es el contenido de proveedores.</p>
+    </div>
+    <div class="content" id="usuariosContent">
+        <div class="contenedorUsuarios">
+            <div class="gridBuscarU" id="usuariobuscar">
+                <div class="contenedor1">
+                    <h2 id="buscartitulo">Buscar</h2>
+                    <div class="opcUsuarios">
+                        <label for="buscarUsuario">Ingrese Nombre, Id, o Rol:</label>
+                        <input type="text" id="buscarUsuario">
+                    </div>
+                    <div class="mejorar">
+                        <div class="tablaUsuarios">
+                            <table id="usuariostabla">
+                                <thead>
+                                    <tr>
+                                        <th>Nombre</th>
+                                        <th>Mail</th>
+                                        <th>Rol</th>
+                                        <th>Fecha de Registro</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="botonesBusqueda">
+                            <button>Limpiar lista</button>
+                            
+                        </div>
+                    </div>
+                    <button id="volverBuscarBtn">Volver</button>
+                </div>
+            </div>
+            <div class="gridAgregarU" id="usuarioagregar">
+                <div class="contenedor2">
+                    <h2 id="agregartitulo">Agregar</h2>
+                    <div class="formularioNuevousuario">
+                        <div class="entrada">
+                            <div>
+                                <label for="nombreInput">Nombre:</label>
+                                <input type="text" id="nombreInput" name="nombreUsuario">
+                            </div>
+                            <div class="usuarioSelect">
+                                <label for="rolInput">Rol:</label>
+                                
+                                    <select id="rolInput">
+                                                    <option value="cajero" selected>cajero</option>
+                                                    <option value="vendedor">vendedor</option>
+                                                    <option value="admin">admin</option>
+                                                    
+                                    </select>
+                            </div>
+                            <div>
+                                <label for="mailInput">Mail:</label>
+                                <input type="text" id="mailInput" name="mail">
+                            </div>
+                            <div>
+                                <label for="contraseniaInput">Contraseña</label>
+                                <input type="text" id="contraseniaInput" name="contrasenia">
+                            </div>
+                            <div>
+                                <label for="repcontraseniaInput">Repetir contraseña:</label>
+                                <input type="text" id="repcontraseniaInput" name="verificar">
+                            </div>
+                        </div>
+                        <button type="submit">Guardar</button>
+                        
+                    </div>
+                    <button id="volverAgregarBtn">Volver</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script/usuarios.js"></script>
+    
+
+    <script>
+        
+        
+
+        function updateTime() {
+            const timeDisplay = document.getElementById('time-display');
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            timeDisplay.textContent = `${hours}:${minutes}:${seconds}`;
+        }
+
+        setInterval(updateTime, 1000); // Actualizar cada segundo
+        updateTime(); // Llamada inicial para mostrar el tiempo inmediatamente
+
+
+
+
+        //pantalla completaVentas
+        document.getElementById('fullscreen-btn').addEventListener('click', function() {
+            const elem = document.documentElement;
+            const cards = document.querySelectorAll('.card');
+            
+
+            if (!document.fullscreenElement) {
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.mozRequestFullScreen) { // Firefox
+                    elem.mozRequestFullScreen();
+                } else if (elem.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                    elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) { // IE/Edge
+                    elem.msRequestFullscreen();
+                }
+                // Cambia la propiedad de .card al entrar en pantalla completa
+                cards.forEach(card => {
+                    card.style.top = '-8vh'; // Ejemplo: cambiar el color de fondo
+                });
+                
+
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) { // Firefox
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) { // Chrome, Safari and Opera
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { // IE/Edge
+                    document.msExitFullscreen();
+                }
+                // Revertir la propiedad de .card al salir de pantalla completa
+                cards.forEach(card => {
+                    card.style.top = ''; // Revertir al valor original
+                });
+                
+            }
+        });
+
+
+        //por defecto empieza inicio
+        showOnly(['paginaInicio']);
+        // Mostrar contenido de Ventas y productos relacionados
+        function showOnly(sectionIds) {
+            // Hide all content sections and related products
+            const allSections = document.querySelectorAll('.content, .related-products');
+            allSections.forEach(section => section.classList.remove('show'));
+
+            // Show the specified sections
+            sectionIds.forEach(id => {
+                const section = document.getElementById(id);
+                if (section) {
+                    section.classList.add('show');
+                }
+            });
+        }
+        //botones para navegar en inicio
+                document.getElementById('inicioBtn').addEventListener('click', function() {
+                    showOnly(['paginaInicio']);
+                });
+
+                document.getElementById('articulosBtn').addEventListener('click', function() {
+                    showOnly(['articulosContent']);
+                    });
+                    document.getElementById('articulos').addEventListener('click', function() {
+                        showOnly(['articulosContent']);
+                });
+
+                document.getElementById('ventasBtn').addEventListener('click', function() {
+                    showOnly(['ventasContent']);
+                    });
+                    document.getElementById('ventas').addEventListener('click', function() {
+                        showOnly(['ventasContent']);
+                });
+
+                document.getElementById('comprasBtn').addEventListener('click', function() {
+                    showOnly(['comprasContent']);
+                    });
+                    document.getElementById('compras').addEventListener('click', function() {
+                        showOnly(['comprasContent']);
+                });
+
+                document.getElementById('clientesBtn').addEventListener('click', function() {
+                    showOnly(['clientesContent']);
+                    });
+                    document.getElementById('clientes').addEventListener('click', function() {
+                        showOnly(['clientesContent']);
+                });
+
+                document.getElementById('proveedoresBtn').addEventListener('click', function() {
+                    showOnly(['proveedoresContent']);
+                    });
+                    document.getElementById('proveedores').addEventListener('click', function() {
+                        showOnly(['proveedoresContent']);
+                });
+
+                document.getElementById('usuariosBtn').addEventListener('click', function() {
+                    showOnly(['usuariosContent']);
+                    });
+                    document.getElementById('usuarios').addEventListener('click', function() {
+                        showOnly(['usuariosContent']);
+                });
+
+    </script>
+    
+    <div id="descuentoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            
+            <label for="descuentoInput">Descuento (%):</label>
+            <input type="number" id="descuentoInput" min="0" max="100" step="0.01">
+            <button id="guardarDescuentoBtn">Guardar</button>
+        </div>
+    </div>
+    <div id="recargoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            
+            <label for="recargoInput">Recargo (%):</label>
+            <input type="number" id="recargoInput" min="0" max="100" step="0.01">
+            <button id="guardarRecargoBtn">Guardar</button>
+        </div>
+    </div>
+    <div id="cantidadModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            
+            <label for="cantidadInput">Cantidad:</label>
+            <input type="number" id="cantidadInput" min="0" max="100" step="0.01">
+            <button id="guardarCantidadBtn">Guardar</button>
+        </div>
+    </div>
+    <div id="precioModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <label for="precioInput">Precio:</label>
+            <input type="number" id="precioInput">
+            <button id="guardarPrecioBtn">Guardar</button>
+        </div>
+    </div>
+    <div id="busqueda" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="listaArticulos"></div>
+        </div>
+    </div>
+    <div id="descuentoRecargoModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Ingresar (-)Descuento/(+)Recargo</h2>
+        <label for="descuentoRecargoInput">(%)</label>
+        <input type="number" id="descuentoRecargoInput" placeholder="Porcentaje">
+        <button id="guardarDescuentoRecargoBtn">Guardar</button>
+    </div>
+    
+    
+
+</div>
+
 </body>
 </html>
